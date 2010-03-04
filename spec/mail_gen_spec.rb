@@ -3,8 +3,8 @@
 require 'mail_gen'
 
 describe 'メール文の生成' do
-  before(:each) do
-    @text = <<TEXT
+	before(:each) do
+		@text = <<TEXT
 美味しい料理と日本酒の飲み会のご案内です。
 
  * 日時: 02月19日(金) 19:30 乾杯
@@ -21,7 +21,7 @@ describe 'メール文の生成' do
 
 全員揃ってのスムーズな乾杯にご協力をお願いします。
 TEXT
-  end
+	end
 
-  it { generate_text('data.yaml.sample').should == @text }
+	it { generate_text('data.yaml.sample').should == @text }
 end
